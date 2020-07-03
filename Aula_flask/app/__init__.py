@@ -1,3 +1,5 @@
+# OBS: Todas as pasta precisam ter um __init__.py, menos as pastas templates e static
+
 from flask import Flask
 
 app = Flask(__name__)
