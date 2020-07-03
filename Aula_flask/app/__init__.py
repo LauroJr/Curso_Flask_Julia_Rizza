@@ -1,18 +1,11 @@
-# OBS: Todas as pasta precisam ter um __init__.py, menos as pastas templates e static
+# OBS: Todas as pasta precisam ter um __init__.py, menos as pastas templates e static.
+# Os __init__.py indica que aquela pasta é um módulo
 
 from flask import Flask
 
 app = Flask(__name__)
 
-
-@app.route('/')
-def index():
-    return 'Hello, World!'
-
-
-if __name__ == '__main__':
-    app.run()
-
+from app.controllers import default
 
 # Vamos usar a estrutura de organização MVC:
 # Model (Banco de dados- informações)
