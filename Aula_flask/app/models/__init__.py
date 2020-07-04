@@ -1,0 +1,1 @@
+# Inicializa essa pasta, dizendo oficialmente que esta é um módulo. Neste caso um submódulo de app

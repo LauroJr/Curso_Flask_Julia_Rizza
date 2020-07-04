@@ -1,5 +1,6 @@
 # OBS: Todas as pasta precisam ter um __init__.py, menos as pastas templates e static.
 # Os __init__.py indica que aquela pasta é um módulo
+# Inicializa essa pasta, dizendo oficialmente que esta é um módulo. Neste caso app é o módulo principal
 
 from flask import Flask
 
