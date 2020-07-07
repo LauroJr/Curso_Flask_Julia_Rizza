@@ -1,0 +1,48 @@
+pip install Flask
+pip install flask-sqlalchemy
+pip install flask-migrate
+pip install flask-script
+
+python run.py runserver
+python run.py db init
+python run.py db migrate
+python run.py db upgrade
+
+
+/********** Comandos Detalhados **********/
+// Para criarmos nosso projeto em flask
+pip install flask
+
+// Para trabalharmos com o banco de dados
+pip install flask-sqlalchemy
+
+// Para salvar todas as bibliotecas do projeto
+pip freeze > requirements.txt
+
+// Para instalar todas as bibliotecas do projeto
+pip install -r requirements.txt
+
+// Para trabalharmos com migrações do banco de dados
+pip install flask-migrate
+
+//Para mudarmos a forma de execução do nosso app e adicionar novos comandos a essa forma de execução
+pip install flask-script
+
+
+//Sempre que alterarmos o banco de dados devemos aplicar os comandos abaixo
+
+// Para criar nossa pasta migrate, pois nela teremos todas as migrações do banco de dados
+python run.py db init
+
+// Para criar nosso banco de dados ou seja o arquivo storage.db
+python run.py db migrate
+
+python run.py db upgrade
+
+// O comando abaixo diz que usaremos o app em ambiente de desenvolvimento
+export FLASK_ENV=development
+
+// O comando abaixo diz que usaremos o app em ambiente de produção
+export FLASK_ENV=production
+
+
