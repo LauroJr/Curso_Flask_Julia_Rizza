@@ -1,12 +1,37 @@
-pip install Flask
-pip install flask-sqlalchemy
-pip install flask-migrate
-pip install flask-script
+Coloque os plugins e bibliotecas abaixo em um arquivo chamado requirements.txt e use o seguinte
+comando: pip install -r requirements.txt
+Este comando irá instalar em sua máquina (Não se esqueça de criar um ambiente virtual), todos
+os plugins que estiverem no arquivo requirements.txt
 
-python run.py runserver
-python run.py db init
-python run.py db migrate
-python run.py db upgrade
+alembic==1.4.2
+click==7.1.2
+flake8==3.8.3
+Flask==1.1.2
+Flask-Migrate==2.5.3
+Flask-Script==2.0.6
+Flask-SQLAlchemy==2.4.3
+itsdangerous==1.1.0
+Jinja2==2.11.2
+Mako==1.1.3
+MarkupSafe==1.1.1
+python-dateutil==2.8.1
+python-editor==1.0.4
+six==1.15.0
+SQLAlchemy==1.3.18
+Werkzeug==1.0.1
+
+
+# Após a importação da classe Manager, será possível rodar a aplicação com runserver, que é um
+comando interno dele por padrão.
+
+# Após rodar sua aplica usando o runserver, precisamos dar comandos para inicializar nosso migrate de banco de
+dados.
+Segue exemplo abaixo:
+
+python run.py runserver     # Roda a aplicação
+python run.py db init       # Cria a pasta migrations (Essa pasta guardara todas as mudanças dos models).
+python run.py db migrate    # Ele pega nossos models, e compara o que há de diferente, e altera para nós.
+python run.py db upgrade    # Faz a alteração conforme mudanças feitas em models
 
 
 /********** Comandos Detalhados **********/

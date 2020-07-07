@@ -12,12 +12,17 @@ from flask_migrate import Migrate, MigrateCommand
 app = Flask(__name__)
 
 # configurando meu objeto, e criando ele localmente. storage.db será o nome do arquivo
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////storage.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///storage.db'
 
 # criando um objeto da classe SQLAlchemy e passando como parâmetro o app
 db = SQLAlchemy(app)
+
+# o objeto migrate terá a tarefa de manipular o bd e o app
 migrate = Migrate(app, db)
 
+# Logo abaixo criamos uma instância de Manager, pois Manager tem comandos próprios para executar nosso app.
+# Além do mais, podemos adicionar comandos que já existe no MigrateCommand. Entenda melhor no arquivo
+# comandos.txt
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)
 
