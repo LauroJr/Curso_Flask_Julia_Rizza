@@ -1,8 +1,17 @@
+# Este arquivo serve para utilizar quando precisar usar em outra máquina. O arquivo completo se encontra no github, porém não basta simplesmente baixar e executá-lo em sua máquina. É preciso instalar esses plugins e bibliotecas do flask. Para isso usamos o comando: pip install -r requirements.txt. Dessa forma todos os arquivos serão instalados em sua máquina. Lembre-se de usar o ambiente virtual. Passo á passo está no git hub "Passo_a_passo_criar_ambiente_virtual". Lembrete: A cada instalação nova de plugin ou biblioteca, não esqueça de adicionar em seu arquivo requirements.txt usando o seguinte comando: pip freeze > requirements.txt.
+
+alembic==1.4.2
 click==7.1.2
 Flask==1.1.2
+Flask-Migrate==2.5.3
+Flask-Script==2.0.6
 Flask-SQLAlchemy==2.4.3
 itsdangerous==1.1.0
 Jinja2==2.11.2
+Mako==1.1.3
 MarkupSafe==1.1.1
+python-dateutil==2.8.1
+python-editor==1.0.4
+six==1.15.0
 SQLAlchemy==1.3.18
 Werkzeug==1.0.1

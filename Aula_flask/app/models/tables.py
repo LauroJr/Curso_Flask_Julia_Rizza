@@ -37,6 +37,7 @@ class Post(db.Model):
     user = db.relationship('User', foreign_keys=user_id)
 
     def __init__(self, content, user_id):
+        # Recebe como parâmetro o conteúdo e o id do usuário que já existe.
         self.content = content
         self.user_id = user_id
 

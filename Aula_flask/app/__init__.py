@@ -4,6 +4,8 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_script import Manager
+from flask_migrate import Migrate, MigrateCommand
 
 
 # criando um objeto do tipo Flask
@@ -14,6 +16,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////storage.db'
 
 # criando um objeto da classe SQLAlchemy e passando como parâmetro o app
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+
+manager = Manager(app)
+manager.add_command('db', MigrateCommand)
 
 # importamos o arquivo default depois de criar o app, pois necessita que esteja criado antes
 from app.controllers import default
