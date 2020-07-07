@@ -4,7 +4,10 @@ from flask import render_template
 
 @app.route('/')
 def index():
-    lista = ['Daniel', 'Marcio', 'Lauro']
+    lista = []
+    for nome in range(3):
+        nome = input('Digite um nome: ')
+        lista.append(nome)
     return render_template('index.html', lista=lista)
 
 @app.route('/ola-mundo')

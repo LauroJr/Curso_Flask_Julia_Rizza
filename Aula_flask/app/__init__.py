@@ -10,9 +10,7 @@ from flask_migrate import Migrate, MigrateCommand
 
 # criando um objeto do tipo Flask
 app = Flask(__name__)
-
-# configurando meu objeto, e criando ele localmente. storage.db será o nome do arquivo
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///storage.db'
+app.config.from_object('config')
 
 # criando um objeto da classe SQLAlchemy e passando como parâmetro o app
 db = SQLAlchemy(app)
