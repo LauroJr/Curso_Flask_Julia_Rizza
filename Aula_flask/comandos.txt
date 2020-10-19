@@ -24,7 +24,7 @@ Werkzeug==1.0.1
 # Após a importação da classe Manager, será possível rodar a aplicação com runserver, que é um
 comando interno dele por padrão.
 
-# Após rodar sua aplica usando o runserver, precisamos dar comandos para inicializar nosso migrate de banco de
+# Após rodar sua aplicação usando o runserver, precisamos dar comandos para inicializar nosso migrate de banco de
 dados.
 Segue exemplo abaixo:
 
