@@ -41,7 +41,7 @@ pip install flask
 // Para trabalharmos com o banco de dados
 pip install flask-sqlalchemy
 
-// Para salvar todas as bibliotecas do projeto
+// Para salvar todas as bibliotecas do projeto dentro da pasta requirements.txt
 pip freeze > requirements.txt
 
 // Para instalar todas as bibliotecas do projeto
@@ -69,5 +69,3 @@ export FLASK_ENV=development
 
 // O comando abaixo diz que usaremos o app em ambiente de produção
 export FLASK_ENV=production
-
-
